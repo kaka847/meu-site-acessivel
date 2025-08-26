@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Acessível</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dança Cristã</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Meu Site</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
-    <main>
-        <section id="sobre">
-            <h2>Sobre o Site</h2>
-            <p>Este site segue boas práticas de acessibilidade.</p>
-        </section>
+  <header>
+    <h1>Dança Cristã</h1>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#ministerio">Ministério</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+  <main id="conteudo">
+    <section id="sobre">
+      <h2>O que é a Dança Cristã?</h2>
+      <p>
+        A dança cristã é uma forma de adoração e expressão do coração para Deus.
+        Através dos movimentos, glorificamos o Senhor e anunciamos o evangelho.
+        Assim como diz em <strong>Salmos 149:3</strong>: “Louvem o seu nome com danças”.
+      </p>
+    </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+    <section id="ministerio">
+      <h2>Nosso Ministério</h2>
+      <p>
+        O ministério de dança busca inspirar vidas através da adoração em movimento,
+        com coreografias que expressam fé, amor e entrega a Cristo.
+      </p>
+    </section>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+    <section id="galeria">
+      <h2>Galeria</h2>
+      <p>Veja alguns momentos de nossas ministrações:</p>
+      <div class="galeria">
+        <img src="images/danca1.jpg" alt="Ministério de dança louvando com coreografia">
+        <img src="images/danca2.jpg" alt="Integrantes do grupo em adoração através da dança">
+        <img src="images/danca3.jpg" alt="Apresentação de dança cristã em culto">
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Meu Site Acessível</p>
-    </footer>
+    <section id="contato">
+      <h2>Contato</h2>
+      <form>
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ministério de Dança Cristã</p>
+  </footer>
 </body>
 </html>
