@@ -1,216 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Ministério de Dança Cristã</title>
-
-  <style>
-    /* --- acessibilidade: link "pular para conteúdo" --- */
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: auto;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      background: #fff;
-      color: #000;
-      padding: .5rem 1rem;
-      border: 2px solid #222;
-      z-index: 9999;
-    }
-
-    /* --- layout básico --- */
-    :root{
-      --accent:#4b0082;
-      --accent-dark:#3a0066;
-      --maxw:1100px;
-    }
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      margin:0;
-      color:#222;
-      background:#fafafa;
-      line-height:1.5;
-    }
-    header{
-      background:var(--accent);
-      color:#fff;
-      padding:1.2rem;
-      text-align:center;
-    }
-    header p{ margin:.4rem 0 0; opacity:.95;}
-
-    main{ max-width:var(--maxw); margin:2rem auto; padding:0 1rem; }
-
-    h2{ color:var(--accent); margin-top:0; }
-
-    section{ margin-bottom:2.5rem; }
-
-    /* --- imagens --- */
-    .banner img{
-      width:100%;
-      height:50vh;
-      object-fit:cover;
-      border-radius:12px;
-      display:block;
-      margin:0 auto;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap:18px;
-      align-items:start;
-    }
-
-    figure{
-      margin:0;
-      text-align:left;
-    }
-    figcaption{
-      font-size:.95rem;
-      color:#444;
-      margin-top:.4rem;
-    }
-
-    /* --- efeito de aparecer (fade + subida leve) --- */
-    img {
-      max-width:100%;
-      height:auto;
-      display:block;
-      border-radius:10px;
-      opacity:0;
-      transform: translateY(18px);
-      transition: opacity .9s ease, transform .9s ease;
-    }
-    img.show {
-      opacity:1;
-      transform: translateY(0);
-    }
-
-    /* --- formulário simples --- */
-    form { display:flex; flex-direction:column; gap:.6rem; max-width:600px; }
-    label { font-weight:600; margin-top:.6rem; }
-    input, textarea, button {
-      padding:.6rem .8rem; font-size:1rem; border-radius:8px; border:1px solid #ccc;
-    }
-    button {
-      background:var(--accent);
-      color:white; border:none; cursor:pointer; margin-top:.6rem;
-    }
-    button:focus, a:focus { outline:3px solid #ffda; outline-offset:3px; }
-
-    footer{
-      background:var(--accent);
-      color:#fff;
-      text-align:center;
-      padding:1rem;
-      margin-top:2rem;
-    }
-
-    @media (max-width:520px){
-      .banner img{ height:42vh; border-radius:8px; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Igreja – Ministério de Mulheres</title>
+  <!-- Linka com o CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <!-- Skip link para acessibilidade -->
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
+  <!-- Cabeçalho -->
   <header>
-    <h1>Ministério de Dança Cristã</h1>
-    <p>"Tudo o que respira louve ao Senhor" — Salmos 150:6</p>
+    <h1>Unidas pelo Reino</h1>
+    <p>Ministério de Mulheres</p>
   </header>
 
   <main id="conteudo">
-    <!-- BANNER -->
-    <section class="banner" aria-labelledby="banner-title">
-      <h2 id="banner-title" style="display:none">Banner</h2>
-      <figure>
-        <img src="images/banner.jpg" alt="Grupo de dançarinas em vestidos azul claro, com braços erguidos em adoração sobre o palco." loading="lazy">
-        <figcaption>Nosso grupo em adoração.</figcaption>
-      </figure>
+    <!-- Banner -->
+    <section class="banner">
+      <img src="banner.jpg" alt="Banner do ministério" loading="lazy">
     </section>
 
-    <!-- NOSSO MINISTÉRIO -->
-    <section id="ministerio" aria-labelledby="ministerio-title">
-      <h2 id="ministerio-title">Nosso Ministério</h2>
-      <figure>
-        <img src="images/ministerio.jpg" alt="Pés de bailarina com sapatilhas ao fundo e uma Bíblia aberta em primeiro plano, simbolizando dança e fé." loading="lazy">
-        <figcaption>Dança e Palavra caminham juntas no nosso ministério.</figcaption>
-      </figure>
-      <p>Somos um ministério que usa a dança como forma de adoração e proclamação. Nossas coreografias buscam expressar fé, cura e libertação.</p>
+    <!-- Quem Somos -->
+    <section id="quem-somos">
+      <h2>Quem Somos</h2>
+      <p>
+        Somos mulheres comprometidas em viver o evangelho de Cristo,
+        apoiando umas às outras e florescendo na fé.
+      </p>
+      <img src="ministerio.jpg" alt="Mulheres reunidas no ministério" loading="lazy">
     </section>
 
-    <!-- GALERIA -->
-    <section id="galeria" aria-labelledby="galeria-title">
-      <h2 id="galeria-title">Galeria</h2>
-      <p>Momentos de adoração e expressão artística.</p>
-
-      <div class="grid" role="list">
-        <figure role="listitem">
-          <img src="images/galeria1.jpg" alt="Ilustração de uma bailarina formada por chamas laranjas dançando sobre fundo preto." loading="lazy">
-          <figcaption>Adoração em chamas — simbolizando paixão por Cristo.</figcaption>
+    <!-- Galeria -->
+    <section id="galeria">
+      <h2>Galeria</h2>
+      <div class="grid">
+        <figure>
+          <img src="galeria1.jpg" alt="Momento de oração no encontro" loading="lazy">
+          <figcaption>Momento de oração</figcaption>
         </figure>
-
-        <figure role="listitem">
-          <img src="images/galeria2.jpg" alt="Dançarina saltando na praia ao pôr do sol segurando um véu azul esvoaçante." loading="lazy">
-          <figcaption>Liberdade e movimento à beira-mar.</figcaption>
+        <figure>
+          <img src="galeria2.jpg" alt="Mulheres em roda de conversa" loading="lazy">
+          <figcaption>Roda de conversa</figcaption>
         </figure>
-
-        <figure role="listitem">
-          <img src="images/galeria3.jpg" alt="Dançarina levantando pó branco que cria uma nuvem ao redor em gesto de adoração." loading="lazy">
-          <figcaption>Expressão corporal em entrega e louvor.</figcaption>
+        <figure>
+          <img src="galeria3.jpg" alt="Louvor com dança" loading="lazy">
+          <figcaption>Louvor com dança</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" aria-labelledby="contato-title">
-      <h2 id="contato-title">Contato</h2>
-      <form aria-label="Formulário de contato">
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <form>
         <label for="nome">Nome</label>
-        <input id="nome" name="nome" type="text" required>
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
+        <input type="text" id="nome" name="nome" required>
 
         <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        <textarea id="mensagem" name="mensagem" required></textarea>
 
         <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 Ministério de Dança Cristã</p>
+    <p>&copy; 2025 Unidas pelo Reino</p>
   </footer>
 
+  <!-- Script para efeito de fade nas imagens -->
   <script>
-    // Animação com IntersectionObserver (aparece ao entrar na viewport)
-    (function(){
-      const imgs = document.querySelectorAll('img');
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('show');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
-
-        imgs.forEach(img => io.observe(img));
-      } else {
-        // fallback simples se não suportar
-        window.addEventListener('load', () => {
-          imgs.forEach((img,i) => setTimeout(()=> img.classList.add('show'), i*200));
+    document.addEventListener("DOMContentLoaded", () => {
+      const images = document.querySelectorAll("img");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
         });
-      }
-    })();
+      }, { threshold: 0.1 });
+
+      images.forEach(img => observer.observe(img));
+    });
   </script>
 </body>
-          </html>
+</html>
